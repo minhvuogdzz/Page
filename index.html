@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--Hero-->
+    <div class="hero flex bg-[#ECE9E3] items-stretch h-[100vh]">
+         <div class="hero__content flex flex-col flex-[1] justify-center items-center text-center self-end px-[2vmax] py-[4vmax] mt-0 gap-[13px]">
+            <p class="tagline text-[12px] leading-[12px] font-[500] tracking-[2px] font-['Jost',sans-serif] text-center uppercase #666 ">95% Natural. 100% Sun-Ready.</p>
+            <h1 class="main-heading text-[60px] leading-[64px] tracking-[0.6px] font-[600] text-center">
+            Summer Glow,
+            <br>Safely Protected
+            </h1>
+        
+             <p class="description text-[18px] leading-[28px] font-[400] tracking-[0.6px] font-['Jost',sans-serif] text-center">
+                Discover lightweight, reef-safe sunscreens and ultra-hydrating lotions for all-day radiance and lasting comfort under the summer sun.
+            </p>
+        
+            <a href="#" class="cta-button mt-[1vmax] inline-block text-[14px] leading-[24px] font-[500] tracking-[0.6px] font-['Jost',sans-serif] text-center px-[50px] py-[13px] uppercase decoration-[none] text-white bg-[#6b7c5a]" role="button">Shop Now</a>
+         </div>
+        <div class="hero__img flex-[2] h-[100%] w-[auto]">
+            <img class="object-cover h-[100%]" src="/asset/img/banner1.jpg" alt="banner1">
+        </div>
+    </div>
+
+    <!--Typo-->
+    <div class="dh__typo flex flex-col items-center text-center gap-[2vmax] pt-[3vmax] pb-[2vmax] px-[30px]">
+        <h1 class="typo-title text-[40px] font-[600] tracking-[0.6px] decoration-[none] text-center leading-[52px]">Why Choose Us?</h1>
+        <div class="typo-items grid grid-cols-4 gap-[2vmax] w-[100%]">
+            <div class="item-typo flex flex-col item-center gap-[1vmax] selt-unset">
+                <div class="typo-icon flex justify-center items-center">
+                    <svg class="w-[32px] h-[32px]" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.998 3V5C20.998 14.6274 15.6255 19 8.99805 19L5.24077 18.9999C5.0786 19.912 4.99805 20.907 4.99805 22H2.99805C2.99805 20.6373 3.11376 19.3997 3.34381 18.2682C3.1133 16.9741 2.99805 15.2176 2.99805 13C2.99805 7.47715 7.4752 3 12.998 3C14.998 3 16.998 4 20.998 3ZM12.998 5C8.57977 5 4.99805 8.58172 4.99805 13C4.99805 13.3624 5.00125 13.7111 5.00759 14.0459C6.26198 12.0684 8.09902 10.5048 10.5019 9.13176L11.4942 10.8682C8.6393 12.4996 6.74554 14.3535 5.77329 16.9998L8.99805 17C15.0132 17 18.8692 13.0269 18.9949 5.38766C17.6229 5.52113 16.3481 5.436 14.7754 5.20009C13.6243 5.02742 13.3988 5 12.998 5Z"></path></svg>
+                </div>
+                <h2 class="item-typo_title text-[16px] leading-[26px] font-[600] tracking-[0.6px] decoration-[none] text-center">
+                    95% Natural
+                </h2>
+                <p class="item-typo_descript text-[16px] leading-[24px] font-[400] tracking-[0.6px] decoration-[none] font-['Jost', sans-serif] text-center">Formulated with 95% plant-derived ingredients to gently nourish and protect your skin—free from harsh chemicals.</p>
+            </div>
+            <div class="item-typo flex flex-col item-center gap-[1vmax] selt-unset">
+                <div class="typo-icon flex justify-center items-center">
+                    <svg class="w-[32px] h-[32px]" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
+                </div>
+                <h2 class="item-typo_title text-[16px] leading-[26px] font-[600] tracking-[0.6px] decoration-[none] text-center">
+                    SPF50+ Protection
+                </h2>
+                <p class="item-typo_descript text-[16px] leading-[24px] font-[400] tracking-[0.6px] decoration-[none] font-['Jost', sans-serif] text-center">Broad-spectrum SPF50+ shields against UVA and UVB rays, ensuring safe, comfortable skin all day.</p>
+            </div>
+            <div class="item-typo flex flex-col item-center gap-[1vmax] selt-unset">
+                <div class="typo-icon flex justify-center items-center">
+                    <svg class="w-[32px] h-[32px]" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.09723L7.05025 8.04697C4.31658 10.7806 4.31658 15.2128 7.05025 17.9465C9.78392 20.6801 14.2161 20.6801 16.9497 17.9465C19.6834 15.2128 19.6834 10.7806 16.9497 8.04697L12 3.09723ZM12 0.268799L18.364 6.63276C21.8787 10.1475 21.8787 15.846 18.364 19.3607C14.8492 22.8754 9.15076 22.8754 5.63604 19.3607C2.12132 15.846 2.12132 10.1475 5.63604 6.63276L12 0.268799Z"></path></svg>
+                </div>
+                <h2 class="item-typo_title text-[16px] leading-[26px] font-[600] tracking-[0.6px] decoration-[none] text-center">
+                    Reef-Safe & Eco
+                </h2>
+                <p class="item-typo_descript text-[16px] leading-[24px] font-[400] tracking-[0.6px] decoration-[none] font-['Jost', sans-serif] text-center ">Formulated with reef-safe UV filters and housed in recyclable packaging to protect oceans and skin.</p>
+            </div>
+            <div class="item-typo flex flex-col item-center gap-[1vmax] selt-unset">
+                <div class="typo-icon flex justify-center items-center">
+                    <svg class="w-[32px] h-[32px]" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.82843 6.99955L8.36396 9.53509L6.94975 10.9493L2 5.99955L6.94975 1.0498L8.36396 2.46402L5.82843 4.99955H13C17.4183 4.99955 21 8.58127 21 12.9996C21 17.4178 17.4183 20.9996 13 20.9996H4V18.9996H13C16.3137 18.9996 19 16.3133 19 12.9996C19 9.68584 16.3137 6.99955 13 6.99955H5.82843Z"></path></svg>
+                </div>
+                <h2 class="item-typo_title text-[16px] leading-[26px] font-[600] tracking-[0.6px] decoration-[none] text-center">
+                    30-Day Guarantee
+                </h2>
+                <p class="item-typo_descript text-[16px] leading-[24px] font-[400] tracking-[0.6px] decoration-[none] font-['Jost', sans-serif] text-center">Risk-free trial: return any unopened product within 30 days for a complete, hassle-free refund.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Typo p1-->
+    <div class="typo1-hero flex items-center mr-[30px] ml-[30px] py-[2vmax]">
+         <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-[fit-content] gap-[1vmax] selt-unset pr-[6vmax] py-[60px] ">
+            <p class="tagline text-[#8e9385] text-[12px] leading-[12px] font-[600] tracking-[2px] decoration-[none] text-left font-['Jost', sans-serif] uppercase">SUMMER SKIN ESSENTIALS</p>
+            <h1 class="main-heading2 text-[40px] font-[600] tracking-[0.6px] decoration-[none] leading-[52px]">
+            Protect & Glow In The Sun
+            </h1>
+             <p class="description text-[18px] leading-[28px] text-[400] tracking-[0.6px] decoration-[none] font-['Jost' sans-serif] text-left">Embrace lightweight, broad-spectrum sunscreens that shield against UVA/UVB damage and ultra-hydrating lotions that lock in moisture for hours. Revel in radiant, comfortable skin from sunrise to sunset, no matter how high the summer temperatures climb.</p>
+            <a href="#" class="cta-button mt-[1vmax] inline-block text-[14px] leading-[24px] font-[500] tracking-[0.6px] font-['Jost',sans-serif] text-center px-[50px] py-[13px] w-[fit-content] h-[fit-content] bg-[#F9DD63] uppercase" role="button">Shop Now</a>
+         </div>
+        <div class="typo-hero-item relative flex flex-col justify-center items-start w-[50%] h-full overflow-hidden">
+        <img class="h-full w-auto object-cover object-center" src="/asset/img/banner2.jpg" alt="banner2">
+    </div>
+
+    </div>
+
+    <!--Typo p2-->
+    <div class="typo2-hero flex items-center mr-[30px] ml-[30px] py-[2vmax]">
+         <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-[fit-content] gap-[1vmax] selt-unset py-[60px] pl-[6vmax] order-2">
+            <p class="tagline text-[#8e9385] text-[12px] leading-[12px] font-[600] tracking-[2px] decoration-[none] text-left font-['Jost', sans-serif] uppercase">SPF & SURF COLLECTION</p>
+            <h1 class="main-heading2 text-[40px] font-[600] tracking-[0.6px] decoration-[none] leading-[52px]">
+            Feel The Breeze, Not The Burn
+            </h1>
+             <p class="description text-[18px] leading-[28px] text-[400] tracking-[0.6px] decoration-[none] font-['Jost' sans-serif] text-left">Watch our silky SPF50+ glide on effortlessly, then follow her as she races into turquoise waves—our antioxidant-rich, water-resistant formula keeps skin hydrated and protected from dawn till dusk.</p>
+            <a href="#" class="cta-button mt-[1vmax] inline-block text-[14px] leading-[24px] font-[500] tracking-[0.6px] font-['Jost',sans-serif] text-center px-[50px] py-[13px] w-[fit-content] h-[fit-content] bg-[#F9DD63] uppercase" role="button">Shop Now</a>
+         </div>
+        <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-full overflow-hidden">
+            <img class="h-full w-auto object-cover object-center" src="/asset/img/banner_video.jpg" alt="banner_video">
+        </div>
+    </div>
+
+   
+<!-- Products -->
+<div class="w-full pt-[2vmax] pb-[4vmax] px-[30px]">
+  <div class="flex flex-col h-fit w-auto self-stretch items-center text-center">
+    <h1 class="typo-title text-[40px] font-[600] tracking-[0.6px] no-underline text-center leading-[52px]">
+      Our Bestsellers
+    </h1>
+    <h2 class="text-[18px] leading-[28px] font-[400] tracking-[0.6px] no-underline text-center font-['Jost',sans-serif]">
+      This is a demonstration store. You can purchase products like this from YAMI
+    </h2>
+  </div>
+
+  <!-- Swiper -->
+  <div class="swiper product-swiper"> <!-- thêm class product-swiper để init riêng -->
+     <div class="swiper-wrapper" id="product-swiper-wrapper">
+      <!-- Products will be rendered here by JS -->
+    </div>
+
+    <!-- Progressbar (custom) -->
+    <div class="swiper-progressbar mt-[20px] h-[2px] relative overflow-hidden w-full rounded-[50px] bg-[#e4e4e4]">
+      <div class="swiper-pagination-progressbar-fill absolute h-full left-0 top-0 rounded bg-[#000] transition-all duration-300" style="width:0%"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-prev flex items-center justify-center w-[44px] h-[44px] rounded-full bg-white shadow !text-gray-700 swiper-button-prev">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </div>
+    <div class="swiper-button-next flex items-center justify-center w-[44px] h-[44px] rounded-full bg-white shadow !text-gray-700 swiper-button-next">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+
+<!--Banner-->
+  <div class="relative py-[12vmax] overflow-hidden">
+  <!-- Video nền -->
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="/asset/img/video.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video.
+  </video>
+  <div class="absolute inset-0 bg-[#1a1b18]/50 mix-blend-multiply"></div>
+  <div class="relative px-[30px] z-10">
+    <div class="flex flex-col items-center gap-[1vmax]">
+      <h1 class="typo-title text-[40px] font-[600] tracking-[0.6px] text-center leading-[52px] text-white">
+        Summer Skincare That Delivers
+      </h1>
+      <h2 class="text-[16px] text-white leading-[24px] font-[400] tracking-[0.6px] text-center font-['Jost',sans-serif]">
+        Clinically proven, reef-safe formulas with 95% natural, 100% cruelty-free ingredients for radiant, protected skin all season long.
+      </h2>
+      <div class="flex items-center justify-center">
+        <a href="#"
+           class="cta-button text-black w-fit h-fit mt-[2vmax] inline-block text-[14px] leading-[24px] font-[500] tracking-[0.6px] font-['Jost',sans-serif] text-center px-[50px] py-[13px] uppercase bg-white"
+           role="button">
+          Skin Care
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Count-down-->
+    <div 
+    class="countdown py-[2vmax] bg-[#f3f6ef]">
+      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
+        <div class="countdown__container flex flex-row justify-center items-center gap-[3vmax] flex-[1_1_0%]">
+          <div class="countdown__content flex flex-col gap-[1vmax] items-start ">
+            <div class="text-p4 text-[12px] leading-[12px] text-[#606459] font-[500] tracking-[2px] uppercase not-italic text-left no-underline">Countdown is on</div>
+            <h4 class="text-h3 text-[2.8rem] leading-[3.8rem] text-[#1a1b18] capitalize font-[600] tracking-[0.6px] not-italic no-underline">Hurry up! Get the best deal at best price</h4>
+            <a href="" class="btn-text text-[1.4rem] leading-[2.4rem] uppercase font-[500] tracking-[0.6px] not-italic text-[#000] underline border-[0px] border-solid border-[rgb(0,0,0)] bg-[var(--transparent)] rounded-[0px] p-[0px]">Shop now</a>
+          </div>
+          <div class="countdown__wrapper flex">
+            <div class="countdown__box min-w-[10rem] text-center border-2 border-black p-4">
+              <div id="days" class="text-h3 text-[2.8rem] leading-[3.8rem] text-[#1a1b18] capitalize font-[600] tracking-[0.6px] not-italic no-underline">34</div>
+              <div class="text-p2 leading-[2.4rem] text-[1.6rem] text-[var(--text_600)] font-[400] tracking-[0.6px] normal-case not-italic text-center no-underline">Days</div>
+            </div>
+            <div class="countdown__colon flex items-center justify-center text-[#000] font-semibold text-[2.8rem] leading-[3.8rem] tracking-[0.6px] mx-4">:</div>
+            <div class="countdown__box min-w-[10rem] text-center border-2 border-black p-4">
+              <div id="hours" class="text-h3 text-[2.8rem] leading-[3.8rem] text-[#1a1b18] capitalize font-[600] tracking-[0.6px] not-italic no-underline">34</div>
+              <div class="text-p2 leading-[2.4rem] text-[1.6rem] text-[var(--text_600)] font-[400] tracking-[0.6px] normal-case not-italic text-center no-underline">Hours</div>
+            </div>
+            <div class="countdown__colon flex items-center justify-center text-[#000] font-semibold text-[2.8rem] leading-[3.8rem] tracking-[0.6px] mx-4">:</div>
+            <div class="countdown__box min-w-[10rem] text-center border-2 border-black p-4">
+              <div id="minutes" class="text-h3 text-[2.8rem] leading-[3.8rem] text-[#1a1b18] capitalize font-[600] tracking-[0.6px] not-italic no-underline">34</div>
+              <div class="text-p2 leading-[2.4rem] text-[1.6rem] text-[var(--text_600)] font-[400] tracking-[0.6px] normal-case not-italic text-center no-underline">Minutes</div>
+            </div>
+            <div class="countdown__colon flex items-center justify-center text-[#000] font-semibold text-[2.8rem] leading-[3.8rem] tracking-[0.6px] mx-4">:</div>
+            <div class="countdown__box min-w-[10rem] text-center border-2 border-black p-4">
+              <div id="seconds" class="text-h3 text-[2.8rem] leading-[3.8rem] text-[#1a1b18] capitalize font-[600] tracking-[0.6px] not-italic no-underline">34</div>
+              <div class="text-p2 leading-[2.4rem] text-[1.6rem] text-[var(--text_600)] font-[400] tracking-[0.6px] normal-case not-italic text-center no-underline">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+<!-- Overview -->
+    <div class="overview mx-[30px]">
+      <div class="container px-[0]">
+        <div class="overview__wrapper">
+          <div class="overview__thumbnail">
+            <div class="swiper swiperOverview">
+              <div class="overview__gallery swiper-wrapper"></div>
+              <button class="overview__button btn-prev">
+                <svg
+                  xmlns="http: //www.w3.org/2000/svg"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="overview__button btn-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="swiper-pagination"></div>
+            </div>
+            <button class="open-modal">
+              <img src="asset/svg/zoom.svg" alt="icon zoom" />
+            </button>
+          </div>
+          <div class="overview__info pl-[5vmax] pr-[0]">
+            <div class="overview__info--brand text-p4">B.O.M</div>
+            <h3 class="overview__info--title text-h3">
+              <a href="">Biom Green UV Sun Off (Renewal)</a>
+            </h3>
+            <div class="overview__info--ratings">
+              <div class="overview__ratings--stars">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"></path>
+                </svg>
+              </div>
+              <div class="overview__ratings--reviews text-p5">
+                (2460 reviews)
+              </div>
+            </div>
+            <div class="overview__info--price">
+              <div class="overview__price">
+                <div class="overview__price--new">$14.32</div>
+                <div class="overview__price--old">$19.59</div>
+              </div>
+              <div class="overview__policy">
+                Tax included. <a href="">Shipping</a> calculated at checkout.
+              </div>
+            </div>
+            <div class="overview__info--description text-p2">
+              <p>
+                <em
+                  >This is a demonstration store. You can purchase products like
+                  this from</em
+                >
+                <a href="">B.O.M Cosmetic</a>
+              </p>
+              <p>
+                This lightweight mineral sunscreen offers powerful SPF50+ PA++++
+                protection without irritating the skin.
+              </p>
+              <p>
+                Formulated with soothing botanical extracts and hydrating
+                ingredients, it shields against UV damage while calming and
+                moisturizing the skin.
+              </p>
+              <p>
+                Perfect for all skin types, including sensitive skin. Leaves no
+                white cast, no stickiness — just a fresh, radiant finish.
+              </p>
+              <p><strong>Size:</strong> 50ml</p>
+            </div>
+            <div class="overview__info--accordion">
+              <div class="accordion__item">
+                <div class="accordion__item--header">
+                  <span>How to Use</span>
+                  <div class="accordion__header--icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="accordion__item--body">
+                  <div class="accordion__content text-p5">
+                    <div class="">
+                      Apply generously to clean, dry skin 15 minutes before sun
+                      exposure. Spread evenly over face, neck, and exposed
+                      areas.
+                    </div>
+                    <div class="">
+                      Reapply every 2–3 hours when outdoors or after swimming or
+                      sweating.
+                    </div>
+                    <div class="">
+                      Use daily in the AM as the final step of your skincare
+                      routine.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__item--header">
+                  <span>Ingredients</span>
+                  <div class="accordion__header--icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="accordion__item--body">
+                  <div class="accordion__content text-p5">
+                    <div class="">
+                      Zinc Oxide, Titanium Dioxide (mineral UV filters).
+                      Hibiscus Flower Extract, Centella Asiatica Extract,
+                      Houttuynia Cordata Extract (botanical soothers). Triple
+                      Hyaluronic Acid, Panthenol, Ceramide NP (hydrating
+                      agents). Caprylic/Capric Triglyceride, Glycerin,
+                      Madecassoside (moisturizing base).
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="overview__info--buttons">
+              <button class="btn btn-add-to-cart">Add to cart</button>
+              <div class="">
+                <button class="btn btn-buy-it-now">Buy it now</button>
+                <button class="btn-more-payment-options text-p2">
+                  More payment options
+                </button>
+              </div>
+            </div>
+            <div class="overview__info--inventory">
+              <div class="overview__inventory--label text-p5">
+                In stock (24 units)
+              </div>
+              <div class="overview__inventory--progress">
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overview__modal">
+          <div class="swiper swiperOverviewModal">
+            <div class="modal__gallery swiper-wrapper"></div>
+            <div class="swiper-pagination hide"></div>
+            <div class="overview__pagination">
+              <button class="overview__button-prev">
+                <svg
+                  style="rotate: 180deg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                </svg>
+              </button>
+              <div class="overview__range">
+                <span class="current">0</span>
+                /
+                <span class="total">0</span>
+              </div>
+              <button class="overview__button-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="close-modal">
+            <img src="asset/svg/close.svg" alt="icon close" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service -->
+     <div class="service mb-[30px] ">
+      <div class="container px-[30px] max-w-[1470px] mx-auto flex flex-wrap min-h-[20px]">
+        <div class="service__list dragscroll">
+          <article class="service__item">
+            <div class="service__item--icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8.96456 18C8.72194 19.6961 7.26324 21 5.5 21C3.73676 21 2.27806 19.6961 2.03544 18H1V6C1 5.44772 1.44772 5 2 5H16C16.5523 5 17 5.44772 17 6V8H20L23 12.0557V18H20.9646C20.7219 19.6961 19.2632 21 17.5 21C15.7368 21 14.2781 19.6961 14.0354 18H8.96456ZM15 7H3V15.0505C3.63526 14.4022 4.52066 14 5.5 14C6.8962 14 8.10145 14.8175 8.66318 16H14.3368C14.5045 15.647 14.7296 15.3264 15 15.0505V7ZM17 13H21V12.715L18.9917 10H17V13ZM17.5 19C18.1531 19 18.7087 18.5826 18.9146 18C18.9699 17.8436 19 17.6753 19 17.5C19 16.6716 18.3284 16 17.5 16C16.6716 16 16 16.6716 16 17.5C16 17.6753 16.0301 17.8436 16.0854 18C16.2913 18.5826 16.8469 19 17.5 19ZM7 17.5C7 16.6716 6.32843 16 5.5 16C4.67157 16 4 16.6716 4 17.5C4 17.6753 4.03008 17.8436 4.08535 18C4.29127 18.5826 4.84689 19 5.5 19C6.15311 19 6.70873 18.5826 6.91465 18C6.96992 17.8436 7 17.6753 7 17.5Z"></path></svg>
+            </div>
+            <div class="text-h6 text-[1.6rem] leading-[2.6rem] text-[var(--text_600)] font-semibold normal-case tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">Free Shipping</div>
+            <div class="text-p2 text-[1.6rem] leading-[2.4rem] text-[var(--text_600)] font-normal tracking-[0.6px] normal-case not-italic no-underline text-center">
+              Enjoy complimentary delivery on all orders above $50.
+            </div>
+          </article>
+          <article class="service__item">
+            <div class="service__item--icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM5.49388 7.0777L13.0001 11.4234V20.11L19.5 16.3469V7.65311L12 3.311L5.49388 7.0777ZM4.5 8.81329V16.3469L11.0001 20.1101V12.5765L4.5 8.81329Z"></path></svg>
+            </div>
+            <div class="text-h6 text-[1.6rem] leading-[2.6rem] text-[var(--text_600)] font-semibold normal-case tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">Fast Dispatch</div>
+            <div class="text-p2 text-[1.6rem] leading-[2.4rem] text-[var(--text_600)] font-normal tracking-[0.6px] normal-case not-italic no-underline text-center">
+              Orders processed and shipped within 24 hours of purchase.
+            </div>
+          </article>
+          <article class="service__item">
+            <div class="service__item--icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.82843 6.99955L8.36396 9.53509L6.94975 10.9493L2 5.99955L6.94975 1.0498L8.36396 2.46402L5.82843 4.99955H13C17.4183 4.99955 21 8.58127 21 12.9996C21 17.4178 17.4183 20.9996 13 20.9996H4V18.9996H13C16.3137 18.9996 19 16.3133 19 12.9996C19 9.68584 16.3137 6.99955 13 6.99955H5.82843Z"></path></svg>
+            </div>
+            <div class="text-h6 text-[1.6rem] leading-[2.6rem] text-[var(--text_600)] font-semibold normal-case tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">Hassle-Free Returns</div>
+            <div class="text-p2 text-[1.6rem] leading-[2.4rem] text-[var(--text_600)] font-normal tracking-[0.6px] normal-case not-italic no-underline text-center">
+              Return unopened items within 30 days for full refund.
+            </div>
+          </article>
+          <article class="service__item">
+            <div class="service__item--icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 4C7.58172 4 4 7.58172 4 12H7C8.10457 12 9 12.8954 9 14V19C9 20.1046 8.10457 21 7 21H4C2.89543 21 2 20.1046 2 19V12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12V19C22 20.1046 21.1046 21 20 21H17C15.8954 21 15 20.1046 15 19V14C15 12.8954 15.8954 12 17 12H20C20 7.58172 16.4183 4 12 4ZM4 14V19H7V14H4ZM17 14V19H20V14H17Z"></path></svg>
+            </div>
+            <div class="text-h6 text-[1.6rem] leading-[2.6rem] text-[var(--text_600)] font-semibold normal-case tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">24/7 Support</div>
+            <div class="text-p2 text-[1.6rem] leading-[2.4rem] text-[var(--text_600)] font-normal tracking-[0.6px] normal-case not-italic no-underline text-center">
+              Expert skincare advice and assistance anytime, day or night.
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- comparison -->
+    <section class="comparison">
+      <div class="container px-[var(--site-margin)] max-w-[var(--page-width,147rem)] mx-auto flex flex-wrap min-h-[2rem]">
+        <div class="comparison__container">
+          <h3 class="text-h2 text-[4rem] leading-[5.2rem] text-[var(--text_600)] normal-case font-semibold tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">Before & After</h3>
+          <div class="comparison__wrapper">
+            <div class="comparison__images">
+              <div class="image-left"></div>
+              <div class="image-right"></div>
+            </div>
+            <div class="comparison__slider">
+              <div class="comparison__slider--line">
+                <div class="comparison__button">
+                  <img src="asset/svg/comparison.svg" alt="resize icon" />
+                </div>
+              </div>
+              <input type="range" min="0" max="100" value="50" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script
+       src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"
+       integrity="sha512-/ncZdOhQm5pgj5KHy720Ck7XF5RzYK6rtUsLNnGcitXrKT3wUYzTrPlOSG7SdL2kDzkuLEOFvrQRyllcZkeAlg=="
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- load module AFTER libraries -->
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
