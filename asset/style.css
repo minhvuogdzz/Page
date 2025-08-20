@@ -1232,9 +1232,10 @@ button.close-modal:hover img {
 .comparison__slider {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 99;
   height: 100%;
+  z-index: 99;
 }
 
 .comparison__slider--line {
@@ -1253,14 +1254,75 @@ button.close-modal:hover img {
   height: 6rem;
   border-radius: 5rem;
   display: flex;
-  position: relative;
+  position: absolute; /* keep positioned relative to line */
   justify-content: center;
   align-items: center;
-  cursor: e-resize;
-  left: -15px;
+  left: calc(var(--slider-pos, 50%) - 1.75rem); /* visual centering; JS still controls clip via input */
   top: 50%;
-  translate: 0 -50%;
+  transform: translateY(-50%);
   animation: pulse-animation 1s ease-in-out 0s infinite alternate;
+  pointer-events: none; /* allow input to receive pointer events */
+  z-index: 100; /* beneath the input which will be transparent */
+}
+
+/* Ensure decorative img remains visible */
+.comparison__button img {
+  width: 2.4rem;
+  height: 2.4rem;
+  rotate: -90deg;
+  display: block;
+  pointer-events: none;
+}
+
+/* Make the input cover the whole slider area and be on top for pointer events */
+.comparison__slider input {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 200; /* above decorative button so it receives pointer events */
+  cursor: ew-resize;
+  touch-action: pan-x; /* improve mobile dragging */
+}
+
+/* Track transparent */
+.comparison__slider input::-webkit-slider-runnable-track {
+  height: 100%;
+  background: transparent;
+}
+
+/* Large but transparent thumb so dragging is easy; decorative button remains visible underneath */
+.comparison__slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6rem; /* match decorative button height */
+  width: 3.5rem; /* match decorative button width */
+  border-radius: 5rem;
+  background: transparent; /* invisible so decorative icon shows through */
+  border: 0;
+  margin-top: calc((100% - 6rem) / 2);
+  box-shadow: none;
+  cursor: ew-resize;
+}
+
+/* Firefox thumb */
+.comparison__slider input::-moz-range-thumb {
+  height: 6rem;
+  width: 3.5rem;
+  border-radius: 5rem;
+  background: transparent;
+  border: 0;
+  cursor: ew-resize;
+}
+
+/* Ensure the vertical line does not block pointer events */
+.comparison__slider--line {
+  pointer-events: none;
 }
 
 @keyframes pulse-animation {
@@ -1273,40 +1335,6 @@ button.close-modal:hover img {
     box-shadow: rgba(61, 61, 61, 0.8) 0px 0px 2px 0px,
       rgba(255, 255, 255, 0.298) 0px 0px 0px 11.731px;
   }
-}
-
-.comparison__button img {
-  width: 2.4rem;
-  height: 2.4rem;
-  rotate: -90deg;
-}
-
-.comparison__slider input {
-  width: 100%;
-  outline: none;
-  background: none;
-  -webkit-appearance: none;
-}
-
-.comparison__slider input::-webkit-slider-thumb {
-  height: 24px;
-  width: 24px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 50%;
-  -webkit-appearance: none;
-  cursor: e-resize;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-  pointer-events: auto;
-}
-.comparison__slider input::-moz-range-thumb {
-  height: 24px;
-  width: 24px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 50%;
-  cursor: e-resize;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
 
 @media only screen and (max-width: 769px) {
@@ -1429,10 +1457,11 @@ button.close-modal:hover img {
   justify-content: center;
 }
 
-.feedback__ratings svg {
+.feedback__ratings i {
   width: 1.6rem;
   height: 1.6rem;
   fill: var(--accent_700);
+  font-weight: 600;
 }
 
 .feedback__name {
