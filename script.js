@@ -1,4 +1,5 @@
 import { products } from "./asset/data/product.js";
+import feedbacks from "./asset/data/feedback.js";
 
 // Render Products
 function renderProducts() {
@@ -267,3 +268,63 @@ comparisonSlider.addEventListener("input", () => {
   comparisonLine.style.left = sliderValue + "%";
   imageRight.style.clipPath = `inset(0 0 0 ${sliderValue}%)`;
 });
+
+// --- Thêm: helper renderRating ---
+function renderRating(rating = 0) {
+  const full = Math.max(0, Math.min(5, Math.floor(Number(rating) || 0)));
+  return Array(full)
+    .fill()
+    .map(
+      () =>
+        `<svg class="w-[14.5px] h-[14.5px] text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9998 17L6.12197 20.5902L7.72007 13.8906L2.48926 9.40983L9.35479 8.85942L11.9998 2.5L14.6449 8.85942L21.5104 9.40983L16.2796 13.8906L17.8777 20.5902L11.9998 17Z"/></svg>`
+    )
+    .join("");
+}
+// --- end helper ---
+
+// --- Sửa: renderFeedback dùng .rating và an toàn nếu DOM chưa có ---
+const renderFeedback = (data) => {
+  if (!Array.isArray(data)) return;
+  const html = data
+    .map((element) => {
+      const stars = renderRating(element.rating);
+      return `
+      <div class="swiper-slide">
+        <div class="feedback__wrapper">
+          <figure class="feedback__avatar">
+            <img src="${element.avatar}" loading="lazy" alt="avatar feedback" />
+          </figure>
+          <div class="feedback__content">
+            <div class="feedback__ratings">
+              ${stars}
+            </div>
+            <div class="text-p1">
+              ${element.feedback}
+            </div>
+            <div class="feedback__name text-p1">– ${element.name}</div>
+          </div>
+        </div>
+      </div>
+    `;
+    })
+    .join("");
+
+  const listEl = document.querySelector(".feedback__list");
+  if (listEl) listEl.innerHTML = html;
+};
+// --- end renderFeedback ---
+
+// Gọi sau khi định nghĩa
+renderFeedback(feedbacks);
+
+new Swiper(".swiperFeedback", {
+  speed: 600,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
