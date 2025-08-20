@@ -1211,31 +1211,6 @@ button.close-modal:hover img {
 }
 
 /* Comparison */
-.comparison {
-  padding-top: 3vmax;
-  padding-bottom: 2vmax;
-}
-
-.comparison__container {
-  display: flex;
-  flex-direction: column;
-  gap: 2vmax;
-  height: fit-content;
-  flex: 1;
-}
-
-.comparison__wrapper {
-  position: relative;
-  height: 60rem;
-  overflow: hidden;
-}
-
-.comparison__images {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
 .image-left {
   background: url("../../../asset/img/banner3.jpg") no-repeat;
   background-size: cover;
