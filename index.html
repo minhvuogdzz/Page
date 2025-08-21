@@ -33,8 +33,12 @@
     </div>
 
     <!--Typo-->
-    <div class="dh__typo flex flex-col items-center text-center gap-[2vmax] pt-[3vmax] pb-[2vmax] px-[30px]">
-        <h1 class="typo-title text-[40px] font-[600] tracking-[0.6px] decoration-[none] text-center leading-[52px]">Why Choose Us?</h1>
+    <div class="dh__typo flex flex-col items-center gap-[2vmax] pt-[3vmax] pb-[2vmax] px-[30px]">
+      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
+        <div class="flex justify-center items-center w-full mb-[2vmax]">
+          <h1 class="typo-title text-[40px] font-[600] tracking-[0.6px] decoration-[none] text-center leading-[52px]">Why Choose Us?</h1>
+        </div>
+        
         <div class="typo-items grid grid-cols-4 gap-[2vmax] w-[100%]">
             <div class="item-typo flex flex-col item-center gap-[1vmax] selt-unset">
                 <div class="typo-icon flex justify-center items-center">
@@ -73,10 +77,12 @@
                 <p class="item-typo_descript text-[16px] leading-[24px] font-[400] tracking-[0.6px] decoration-[none] font-['Jost', sans-serif] text-center">Risk-free trial: return any unopened product within 30 days for a complete, hassle-free refund.</p>
             </div>
         </div>
+      </div>
     </div>
 
     <!--Typo p1-->
     <div class="typo1-hero flex items-center mr-[30px] ml-[30px] py-[2vmax]">
+      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
          <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-[fit-content] gap-[1vmax] selt-unset pr-[6vmax] py-[60px] ">
             <p class="tagline text-[#8e9385] text-[12px] leading-[12px] font-[600] tracking-[2px] decoration-[none] text-left font-['Jost', sans-serif] uppercase">SUMMER SKIN ESSENTIALS</p>
             <h1 class="main-heading2 text-[40px] font-[600] tracking-[0.6px] decoration-[none] leading-[52px]">
@@ -88,11 +94,12 @@
         <div class="typo-hero-item relative flex flex-col justify-center items-start w-[50%] h-full overflow-hidden">
         <img class="h-full w-auto object-cover object-center" src="/asset/img/banner2.jpg" alt="banner2">
     </div>
-
+      </div>
     </div>
 
     <!--Typo p2-->
     <div class="typo2-hero flex items-center mr-[30px] ml-[30px] py-[2vmax]">
+      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
          <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-[fit-content] gap-[1vmax] selt-unset py-[60px] pl-[6vmax] order-2">
             <p class="tagline text-[#8e9385] text-[12px] leading-[12px] font-[600] tracking-[2px] decoration-[none] text-left font-['Jost', sans-serif] uppercase">SPF & SURF COLLECTION</p>
             <h1 class="main-heading2 text-[40px] font-[600] tracking-[0.6px] decoration-[none] leading-[52px]">
@@ -104,11 +111,12 @@
         <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-full overflow-hidden">
             <img class="h-full w-auto object-cover object-center" src="/asset/img/banner_video.jpg" alt="banner_video">
         </div>
+      </div>
     </div>
 
    
 <!-- Products -->
-<div class="w-full pt-[2vmax] pb-[4vmax] px-[30px]">
+<div class="w-full pt-[2vmax] pb-[4vmax]">
   <div class="flex flex-col h-fit w-auto self-stretch items-center text-center">
     <h1 class="typo-title text-[40px] font-[600] tracking-[0.6px] no-underline text-center leading-[52px]">
       Our Bestsellers
@@ -117,8 +125,8 @@
       This is a demonstration store. You can purchase products like this from YAMI
     </h2>
   </div>
-
   <!-- Swiper -->
+   <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
   <div class="swiper product-swiper"> <!-- thêm class product-swiper để init riêng -->
      <div class="swiper-wrapper" id="product-swiper-wrapper">
       <!-- Products will be rendered here by JS -->
@@ -141,11 +149,12 @@
       </svg>
     </div>
   </div>
+  <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]"></div>
 </div>
 
 
 <!--Banner-->
-  <div class="relative py-[12vmax] overflow-hidden">
+  <div class="relative py-[12vmax] overflow-hidden mt-[2vmax]">
   <!-- Video nền -->
   <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
     <source src="/asset/img/video.mp4" type="video/mp4">
@@ -175,7 +184,7 @@
     <div 
     class="countdown py-[2vmax] bg-[#f3f6ef]">
       <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
-        <div class="countdown__container flex flex-row justify-center items-center gap-[3vmax] flex-[1_1_0%]">
+        <div class="countdown__container max-md:flex-col flex flex-row justify-center items-center gap-[3vmax] flex-[1_1_0%]">
           <div class="countdown__content flex flex-col gap-[1vmax] items-start ">
             <div class="text-p4 text-[12px] leading-[12px] text-[#606459] font-[500] tracking-[2px] uppercase not-italic text-left no-underline">Countdown is on</div>
             <h4 class="text-h3 text-[2.8rem] leading-[3.8rem] text-[#1a1b18] capitalize font-[600] tracking-[0.6px] not-italic no-underline">Hurry up! Get the best deal at best price</h4>
@@ -208,7 +217,7 @@
   
 <!-- Overview -->
     <div class="overview mx-[30px]">
-      <div class="container px-[0]">
+      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
         <div class="overview__wrapper">
           <div class="overview__thumbnail">
             <div class="swiper swiperOverview">
@@ -441,7 +450,7 @@
     <!-- Service -->
      <div class="service mb-[30px] ">
       <div class="container px-[30px] max-w-[1470px] mx-auto flex flex-wrap min-h-[20px]">
-        <div class="service__list dragscroll">
+        <div class="service__list flex flex-wrap justify-between gap-[1.5vmax] dragscroll">
           <article class="service__item">
             <div class="service__item--icon">
               <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8.96456 18C8.72194 19.6961 7.26324 21 5.5 21C3.73676 21 2.27806 19.6961 2.03544 18H1V6C1 5.44772 1.44772 5 2 5H16C16.5523 5 17 5.44772 17 6V8H20L23 12.0557V18H20.9646C20.7219 19.6961 19.2632 21 17.5 21C15.7368 21 14.2781 19.6961 14.0354 18H8.96456ZM15 7H3V15.0505C3.63526 14.4022 4.52066 14 5.5 14C6.8962 14 8.10145 14.8175 8.66318 16H14.3368C14.5045 15.647 14.7296 15.3264 15 15.0505V7ZM17 13H21V12.715L18.9917 10H17V13ZM17.5 19C18.1531 19 18.7087 18.5826 18.9146 18C18.9699 17.8436 19 17.6753 19 17.5C19 16.6716 18.3284 16 17.5 16C16.6716 16 16 16.6716 16 17.5C16 17.6753 16.0301 17.8436 16.0854 18C16.2913 18.5826 16.8469 19 17.5 19ZM7 17.5C7 16.6716 6.32843 16 5.5 16C4.67157 16 4 16.6716 4 17.5C4 17.6753 4.03008 17.8436 4.08535 18C4.29127 18.5826 4.84689 19 5.5 19C6.15311 19 6.70873 18.5826 6.91465 18C6.96992 17.8436 7 17.6753 7 17.5Z"></path></svg>
@@ -484,7 +493,7 @@
 
     <!-- comparison -->
     <div class="comparison pt-[3vmax] pb-[2vmax]">
-      <div class="container px-[var(--site-margin)] max-w-[var(--page-width,147rem)] mx-auto flex flex-wrap min-h-[2rem]">
+      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
         <div class="comparison__container flex flex-col gap-[2vmax] h-fit flex-1">
           <h3 class="text-h2 text-[4rem] leading-[5.2rem] text-[var(--text_600)] normal-case font-semibold tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">Before & After</h3>
           <div class="comparison__wrapper relative h-[60rem] overflow-hidden">
@@ -507,7 +516,7 @@
 
     <!-- Brand -->
     <div class="brand py-[2vmax]">
-      <div class="container px-[var(--site-margin)] max-w-[var(--page-width,147rem)] mx-auto flex flex-wrap min-h-[2rem]">
+      <div class="container px-[30px] max-w-[1470px] mx-auto flex flex-wrap min-h-[20px]">
         <div class="brand__list overflow-hidden">
           <div class="brand__track flex w-[max-content]">
             <div class="brand__item">
@@ -597,7 +606,7 @@
 
     <!-- Feedback -->
     <div class="feedback py-[2vmax]">
-      <div class="container px-[var(--site-margin)] max-w-[var(--page-width,147rem)] mx-auto flex flex-wrap min-h-[2rem]">
+      <div class="container px-[30px] max-w-[1470px] mx-auto flex flex-wrap min-h-[20px]">
         <div class="feedback__container flex flex-col gap-[2vmax] h-fit flex-1 max-w-[100%]">
           <div class="feedback__heading">
             <div class="text-h2 text-[4rem] leading-[5.2rem] text-[var(--text_600)] normal-case font-semibold tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">What Clients Are Saying</div>
@@ -616,6 +625,25 @@
         </div>
       </div>
     </div>
+
+    <!-- Question -->
+    <div class="question py-[2vmax]">
+      <div class="container px-[30px] max-w-[1470px] mx-auto flex flex-wrap min-h-[20px]">
+        <div class="question__container flex gap-[2vmax] h-fit w-[100%]">
+          <div class="question__wrapper flex flex-col gap-[2vmax] h-fit self-unset w-[60%] flex-[0_0_60%]">
+            <div class="question__heading flex flex-col gap-[1vmax] h-fit flex-unset w-unset self-stretch items-start"> 
+              <div class="text-p4 text-[1.2rem] leading-[1.2rem] text-[var(--text_500)] font-medium tracking-[2px] uppercase not-italic no-underline text-left">QUESTIONS & ANSWERS</div>
+              <div class="text-h2 text-[4rem] leading-[5.2rem] text-[var(--text_600)] normal-case font-semibold tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">Frequently Ask Questions</div>
+            </div>
+            <div class="question__accordion"></div>
+          </div>
+          <figure class="question__banner flex-[1_1_auto] min-h-[1px]">
+            <img src="asset/img/bannr5.jpg" alt="banner question" class="aspect-[4/5]" />
+          </figure>
+        </div>
+      </div>
+    </div>
+
   <script
        src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"
        integrity="sha512-/ncZdOhQm5pgj5KHy720Ck7XF5RzYK6rtUsLNnGcitXrKT3wUYzTrPlOSG7SdL2kDzkuLEOFvrQRyllcZkeAlg=="

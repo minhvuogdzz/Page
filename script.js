@@ -1,5 +1,6 @@
 import { products } from "./asset/data/product.js";
 import feedbacks from "./asset/data/feedback.js";
+import questions from "./asset/data/question.js";
 
 // Render Products
 function renderProducts() {
@@ -328,3 +329,30 @@ new Swiper(".swiperFeedback", {
   },
 });
 
+// question
+const renderQuestion = (data) => {
+  let html = "";
+  html = data.map((element) => {
+    return `
+      <div class="accordion__item">
+        <div class="accordion__item--header">
+          <span>${element.question}</span>
+          <div class="accordion__header--icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="accordion__item--body">
+          <div class="accordion__content text-p2">${element.answer}</div>
+        </div>
+      </div>
+    `;
+  });
+  document.querySelector(".question__accordion").innerHTML = html.join("");
+};
+renderQuestion(questions);
