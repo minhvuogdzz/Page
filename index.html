@@ -81,8 +81,8 @@
     </div>
 
     <!--Typo p1-->
-    <div class="typo1-hero flex items-center mr-[30px] ml-[30px] py-[2vmax]">
-      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
+    <div class="typo1-hero py-[2vmax]">
+      <div class="container max-md:flex-col-reverse max-md:gap-[3vmax] max-md:h-fit px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
          <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-[fit-content] gap-[1vmax] selt-unset pr-[6vmax] py-[60px] ">
             <p class="tagline text-[#8e9385] text-[12px] leading-[12px] font-[600] tracking-[2px] decoration-[none] text-left font-['Jost', sans-serif] uppercase">SUMMER SKIN ESSENTIALS</p>
             <h1 class="main-heading2 text-[40px] font-[600] tracking-[0.6px] decoration-[none] leading-[52px]">
@@ -98,8 +98,8 @@
     </div>
 
     <!--Typo p2-->
-    <div class="typo2-hero flex items-center mr-[30px] ml-[30px] py-[2vmax]">
-      <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
+    <div class="typo2-hero py-[2vmax]">
+      <div class="container max-md:flex-col max-md:gap-[3vmax] max-md:h-[100%] px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
          <div class="typo-hero-item flex flex-col justify-center items-[flex-start] w-[50%] h-[fit-content] gap-[1vmax] selt-unset py-[60px] pl-[6vmax] order-2">
             <p class="tagline text-[#8e9385] text-[12px] leading-[12px] font-[600] tracking-[2px] decoration-[none] text-left font-['Jost', sans-serif] uppercase">SPF & SURF COLLECTION</p>
             <h1 class="main-heading2 text-[40px] font-[600] tracking-[0.6px] decoration-[none] leading-[52px]">
@@ -118,7 +118,7 @@
 <!-- Products -->
 <div class="w-full pt-[2vmax] pb-[4vmax]">
   <div class="flex flex-col h-fit w-auto self-stretch items-center text-center">
-    <h1 class="typo-title text-[40px] font-[600] tracking-[0.6px] no-underline text-center leading-[52px]">
+    <h1 class="typo-title max-md:text-[28px] text-[40px] font-[600] tracking-[0.6px] no-underline text-center leading-[52px]">
       Our Bestsellers
     </h1>
     <h2 class="text-[18px] leading-[28px] font-[400] tracking-[0.6px] no-underline text-center font-['Jost',sans-serif]">
@@ -138,15 +138,11 @@
     </div>
 
     <!-- Navigation -->
-    <div class="swiper-button-prev flex items-center justify-center w-[44px] h-[44px] rounded-full bg-white shadow !text-gray-700 swiper-button-prev">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
+    <div class="swiper-button-prev flex items-center justify-center w-[44px] h-[44px] rounded-full !text-gray-700 swiper-button-prev">
+      
     </div>
-    <div class="swiper-button-next flex items-center justify-center w-[44px] h-[44px] rounded-full bg-white shadow !text-gray-700 swiper-button-next">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
+    <div class="swiper-button-next flex items-center justify-center w-[44px] h-[44px] rounded-full !text-gray-700 swiper-button-next">
+      
     </div>
   </div>
   <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]"></div>
@@ -219,7 +215,7 @@
     <div class="overview mx-[30px]">
       <div class="container px-[3rem] max-w-[147rem] flex flex-wrap min-h-[2rem] m-[0_auto]">
         <div class="overview__wrapper">
-          <div class="overview__thumbnail">
+          <div class="overview__thumbnail h-auto">
             <div class="swiper swiperOverview">
               <div class="overview__gallery swiper-wrapper"></div>
               <button class="overview__button btn-prev">
@@ -252,7 +248,7 @@
               <img src="asset/svg/zoom.svg" alt="icon zoom" />
             </button>
           </div>
-          <div class="overview__info pl-[5vmax] pr-[0]">
+          <div class="overview__info">
             <div class="overview__info--brand text-p4">B.O.M</div>
             <h3 class="overview__info--title text-h3">
               <a href="">Biom Green UV Sun Off (Renewal)</a>
@@ -448,7 +444,7 @@
     </div>
 
     <!-- Service -->
-     <div class="service mb-[30px] ">
+     <div class="service py-[2vmax] ">
       <div class="container px-[30px] max-w-[1470px] mx-auto flex flex-wrap min-h-[20px]">
         <div class="service__list flex flex-wrap justify-between gap-[1.5vmax] dragscroll">
           <article class="service__item">
@@ -614,11 +610,11 @@
           <div class="feedback__slideshow h-auto max-w-[95rem] m-auto">
             <div class="swiper swiperFeedback">
               <div class="feedback__list swiper-wrapper"></div>
-              <div class="swiper-button swiper-button-next">
-                <i class="ti-angle-right ti-solid"></i>
+              <div class="swiper-button swiper-button-next text-[#000]">
+                <!-- <i class="ti-angle-right ti-solid"></i> -->
               </div>
-              <div class="swiper-button swiper-button-prev">
-                <i class="ti-angle-left ti-solid "></i>
+              <div class="swiper-button swiper-button-prev text-[#000]">
+                <!-- <i class="ti-angle-left ti-solid "></i> -->
               </div>
             </div>
           </div>
@@ -630,7 +626,7 @@
     <div class="question py-[2vmax]">
       <div class="container px-[30px] max-w-[1470px] mx-auto flex flex-wrap min-h-[20px]">
         <div class="question__container flex gap-[2vmax] h-fit w-[100%]">
-          <div class="question__wrapper flex flex-col gap-[2vmax] h-fit self-unset w-[60%] flex-[0_0_60%]">
+          <div class="question__wrapper flex flex-col gap-[2vmax] h-fit self-unset">
             <div class="question__heading flex flex-col gap-[1vmax] h-fit flex-unset w-unset self-stretch items-start"> 
               <div class="text-p4 text-[1.2rem] leading-[1.2rem] text-[var(--text_500)] font-medium tracking-[2px] uppercase not-italic no-underline text-left">QUESTIONS & ANSWERS</div>
               <div class="text-h2 text-[4rem] leading-[5.2rem] text-[var(--text_600)] normal-case font-semibold tracking-[0.6px] not-italic no-underline font-[var(--font-cabin)] text-center">Frequently Ask Questions</div>

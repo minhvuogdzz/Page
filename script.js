@@ -330,6 +330,44 @@ new Swiper(".swiperFeedback", {
 });
 
 // question
+const questionAccordionItems = document.querySelectorAll(
+  ".question .accordion__item--header"
+);
+
+questionAccordionItems.forEach((item) => {
+  const icon = item.querySelector(".question .accordion__header--icon");
+  const accordionItem = item.closest(".question .accordion__item");
+  item.addEventListener("click", () => {
+    document
+      .querySelectorAll(".question .accordion__item.active")
+      .forEach((el) => {
+        el.classList.remove("active");
+      });
+
+    document
+      .querySelectorAll(".question .accordion__header--icon")
+      .forEach((el) => {
+        el.innerHTML = `<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path>
+                    </svg>`;
+      });
+
+    icon.innerHTML = `<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor">
+                        <path
+                          d="M5 11V13H19V11H5Z">
+                        </path>
+                      </svg>`;
+    accordionItem.classList.add("active");
+  });
+});
+
 const renderQuestion = (data) => {
   let html = "";
   html = data.map((element) => {
@@ -356,3 +394,34 @@ const renderQuestion = (data) => {
   document.querySelector(".question__accordion").innerHTML = html.join("");
 };
 renderQuestion(questions);
+
+// --- ADDED: attach accordion handlers AFTER renderQuestion ---
+(function attachQuestionAccordion() {
+  const PLUS_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>`;
+  const MINUS_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 11V13H19V11H5Z"/></svg>`;
+
+  const container = document.querySelector(".question__accordion");
+  if (!container) return;
+
+  container.addEventListener("click", (e) => {
+    const header = e.target.closest(".accordion__item--header");
+    if (!header || !container.contains(header)) return;
+
+    const item = header.closest(".accordion__item");
+    if (!item) return;
+
+    const icon = header.querySelector(".accordion__header--icon");
+    const wasActive = item.classList.contains("active");
+
+    // Collapse all & reset icons
+    container.querySelectorAll(".accordion__item.active").forEach((el) => el.classList.remove("active"));
+    container.querySelectorAll(".accordion__header--icon").forEach((el) => (el.innerHTML = PLUS_SVG));
+
+    // Toggle open the clicked item
+    if (!wasActive) {
+      item.classList.add("active");
+      if (icon) icon.innerHTML = MINUS_SVG;
+    }
+  });
+})();
+// --- end attachQuestionAccordion ---

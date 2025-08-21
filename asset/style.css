@@ -387,7 +387,6 @@ figure.icon {
   height: 48px;
   width: 48px;
   padding: 15px;
-  box-shadow: 0 2px 10px #00000026;
   border-radius: 50%;
 }
 
@@ -395,7 +394,7 @@ figure.icon {
 .swiper-rtl .swiper-button-prev:after,
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  display: none;
+  display: block;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -792,8 +791,7 @@ figure.icon {
 }
 
 .overview .accordion__item {
-  border: 1px solid #e4e4e4;
-  border-top: 1px solid var(--text_100);
+  border-bottom: 1px solid var(--text_100);
   border-right: 0px solid #000000;
   border-left: 0px solid #000000;
   padding-left: 1vmax;
@@ -801,6 +799,10 @@ figure.icon {
   padding-top: 1vmax;
   padding-bottom: 0vmax;
   cursor: pointer;
+}
+
+.overview .accordion__item:first-child {
+  border-top: 1px solid var(--text_100);
 }
 
 .overview .accordion__item.active {
@@ -1160,7 +1162,7 @@ button.close-modal:hover img {
 @media only screen and (max-width: 769px) {
   .service__list {
     overflow-x: auto;
-    flex-wrap: nowrap;         /* không wrap -> hàng ngang scroll */
+    flex-wrap: nowrap !important;       
     -webkit-overflow-scrolling: touch;
     /* scroll-snap-type: x mandatory; */
   }
@@ -1576,13 +1578,13 @@ button.close-modal:hover img {
 
 @media only screen and (max-width: 769px) {
   .question {
-    padding-top: 3vmax;
-    padding-bottom: 3vmax;
+    padding-top: 3vmax !important;
+    padding-bottom: 3vmax !important;
   }
 
   .question__container {
-    flex-direction: column;
-    gap: 4vmax;
+    flex-direction: column !important;
+    gap: 4vmax !important;
   }
 
   .question__wrapper {
@@ -1590,11 +1592,12 @@ button.close-modal:hover img {
   }
 
   .question__accordion .accordion__item--header {
-    color: var(--text_900);
-    font-weight: 600;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    letter-spacing: 0.6px;
+    color: var(--text_900)  !important;
+    font-weight: 600 !important;
+    font-size: 1.4rem !important;
+    line-height: 2.4rem   !important;
+    letter-spacing: 0.6px   !important;
+    width: 100% !important;
   }
 
   .question__accordion .accordion__item.active .accordion__content {
