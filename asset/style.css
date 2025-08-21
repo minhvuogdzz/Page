@@ -1712,6 +1712,5 @@ button.close-modal:hover img {
     font-size: 1.4rem;
     line-height: 1.8rem;
     background: color-mix(in srgb, var(--text_900) 100%, transparent);
-    color: var(--white);
   }
 }
