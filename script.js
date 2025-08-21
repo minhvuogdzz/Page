@@ -27,8 +27,8 @@ function renderProducts() {
                class="w-full bg-[#fdf6ee] rounded-xl" 
                alt="${product.name}">
           <button
-            class="absolute m-[20px] bottom-0 left-0 right-0 bg-[#6b7c5a] text-white font-semibold py-3
-                   transform translate-y-full opacity-0
+            class="absolute m-[10px] bottom-0 left-0 right-0 bg-[#6b7c5a] text-white font-[500] py-[13px]
+                   transform translate-y-full opacity-0 text-[14px] leading-[24px] 
                    group-hover:translate-y-0 group-hover:opacity-100
                    transition duration-300 ease-out">
             ADD TO CART
