@@ -379,13 +379,13 @@ figure.icon {
 .swiper-button {
   cursor: pointer;
   transition: color ease 0.25s;
-  background-color: #ffffff00 !important;
+  background-color: #fff;
   color: #000;
   display: none;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 48px;
+  height: 36px !important;
+  width: 36px !important;
   padding: 15px;
   border-radius: 50%;
 }
@@ -395,6 +395,7 @@ figure.icon {
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
   display: block;
+  font-size: 20px !important;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
