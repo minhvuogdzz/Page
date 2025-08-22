@@ -1115,9 +1115,7 @@ button.close-modal:hover img {
   }
 }
 
-/* Service section */
-
-/* Service list: static layout on desktop, horizontal scroll only on small screens */
+/* Service */
 .service__list {
   display: flex;
   gap: 1.5vmax;
@@ -1126,13 +1124,11 @@ button.close-modal:hover img {
   -webkit-overflow-scrolling: auto;
 }
 
-/* mỗi item chiếm ~1/4 width (desktop) */
 .service__item {
   flex: 0 0 calc(25% - 1.5vmax);
   box-sizing: border-box;
   padding: 1vmax 1.5vmax;
   margin: 0;
-  /* restore card appearance */
   border: 1px solid #000000;
   display: flex;
   flex-direction: column;
@@ -1141,7 +1137,7 @@ button.close-modal:hover img {
   background: var(--white);
 }
 
-/* ensure icon container keeps fixed size and centers the svg */
+
 .service__item--icon {
   width: 3rem;
   height: 3rem;
@@ -1151,7 +1147,7 @@ button.close-modal:hover img {
   margin-bottom: 0.6rem;
 }
 
-/* force svg inside icon to fixed size to avoid being stretched */
+
 .service__item--icon svg,
 .service__item--icon img {
   width: 3rem;
@@ -1199,16 +1195,16 @@ button.close-modal:hover img {
   pointer-events: auto !important;
 }
 
-/* Override for product slides: align content to left/top */
+
 .product-swiper .swiper-slide {
   align-items: flex-start;     
   text-align: left;            
   padding: 12px 0;             
 }
 
-/* Nếu cần canh cả phần nội dung trong thẻ card xuống dưới, giữ .swiper-card-content */
+
 .product-swiper .swiper-card-content {
-  margin-top: 10px; /* nếu trước đó có margin-top:auto */
+  margin-top: 10px; 
 }
 
 /* Comparison */
@@ -1255,18 +1251,17 @@ button.close-modal:hover img {
   height: 6rem;
   border-radius: 5rem;
   display: flex;
-  position: absolute; /* keep positioned relative to line */
+  position: absolute; 
   justify-content: center;
   align-items: center;
-  left: calc(var(--slider-pos, 50%) - 1.75rem); /* visual centering; JS still controls clip via input */
+  left: calc(var(--slider-pos, 50%) - 1.75rem); 
   top: 50%;
   transform: translateY(-50%);
   animation: pulse-animation 1s ease-in-out 0s infinite alternate;
-  pointer-events: none; /* allow input to receive pointer events */
-  z-index: 100; /* beneath the input which will be transparent */
+  pointer-events: none; 
+  z-index: 100; 
 }
 
-/* Ensure decorative img remains visible */
 .comparison__button img {
   width: 2.4rem;
   height: 2.4rem;
@@ -1275,10 +1270,9 @@ button.close-modal:hover img {
   pointer-events: none;
 }
 
-/* Make the input cover the whole slider area and be on top for pointer events */
 .comparison__slider input {
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  inset: 0; 
   width: 100%;
   height: 100%;
   margin: 0;
@@ -1286,25 +1280,25 @@ button.close-modal:hover img {
   background: transparent;
   -webkit-appearance: none;
   appearance: none;
-  z-index: 200; /* above decorative button so it receives pointer events */
+  z-index: 200;
   cursor: ew-resize;
-  touch-action: pan-x; /* improve mobile dragging */
+  touch-action: pan-x; 
 }
 
-/* Track transparent */
+
 .comparison__slider input::-webkit-slider-runnable-track {
   height: 100%;
   background: transparent;
 }
 
-/* Large but transparent thumb so dragging is easy; decorative button remains visible underneath */
+
 .comparison__slider input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  height: 6rem; /* match decorative button height */
-  width: 3.5rem; /* match decorative button width */
+  height: 6rem; 
+  width: 3.5rem; 
   border-radius: 5rem;
-  background: transparent; /* invisible so decorative icon shows through */
+  background: transparent; 
   border: 0;
   margin-top: calc((100% - 6rem) / 2);
   box-shadow: none;
@@ -1321,7 +1315,6 @@ button.close-modal:hover img {
   cursor: ew-resize;
 }
 
-/* Ensure the vertical line does not block pointer events */
 .comparison__slider--line {
   pointer-events: none;
 }
@@ -1361,7 +1354,7 @@ button.close-modal:hover img {
   }
 
   .service__item {
-    flex: 0 0 80%; /* keep horizontal scroll on mobile without overflow */
+    flex: 0 0 80%; 
   }
 }
 
