@@ -379,7 +379,7 @@ figure.icon {
 .swiper-button {
   cursor: pointer;
   transition: color ease 0.25s;
-  background-color: #fff;
+  background-color: #ffffff7e !important;
   color: #000;
   display: none;
   justify-content: center;
@@ -1121,8 +1121,8 @@ button.close-modal:hover img {
 .service__list {
   display: flex;
   gap: 1.5vmax;
-  flex-wrap: wrap;        /* cho phép xuống dòng (không phải slide) trên desktop */
-  overflow-x: visible;    /* không tạo scroll ngang mặc định */
+  flex-wrap: wrap;       
+  overflow-x: visible;   
   -webkit-overflow-scrolling: auto;
 }
 
@@ -1136,7 +1136,7 @@ button.close-modal:hover img {
   border: 1px solid #000000;
   display: flex;
   flex-direction: column;
-  align-items: center; /* keep icon & texts centered as in HTML */
+  align-items: center; 
   gap: 1vmax;
   background: var(--white);
 }
@@ -1159,24 +1159,21 @@ button.close-modal:hover img {
   display: block;
 }
 
-/* keep mobile behavior (horizontal scroll) as before */
+
 @media only screen and (max-width: 769px) {
   .service__list {
     overflow-x: auto;
     flex-wrap: nowrap !important;       
-    -webkit-overflow-scrolling: touch;
-    /* scroll-snap-type: x mandatory; */
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory;
   }
   .service__item {
-    flex: 0 0 80%;             /* mỗi item rộng 80% viewport (tùy chỉnh) */
+    flex: 0 0 80%;             
     scroll-snap-align: start;
     margin-right: 1.5vmax;
   }
 }
-  /* text-align: left;
-} */
 
-/* Swiper product card uniform bottom alignment */
 .product-swiper,
 .product-swiper .swiper-wrapper {
     height: 100%;
