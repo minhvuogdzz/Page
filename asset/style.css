@@ -420,6 +420,36 @@ figure.icon {
   display: block;
 }
 
+.typo-items,
+.service__list,
+.moment__gallery,
+.feedback__slideshow,
+.feedback__slideshow .swiper-wrapper,
+.brand__track {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* WebKit */
+.typo-items::-webkit-scrollbar,
+.service__list::-webkit-scrollbar,
+.moment__gallery::-webkit-scrollbar,
+.feedback__slideshow::-webkit-scrollbar,
+.feedback__slideshow .swiper-wrapper::-webkit-scrollbar,
+.brand__track::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Ensure child wrappers don't force visible scrollbars */
+.typo-items * ,
+.service__list * ,
+.moment__gallery * ,
+.feedback__slideshow * {
+  box-sizing: border-box;
+}
+
 @media only screen and (max-width: 769px) {
   .container {
     padding-left: var(--site-margin-mobile);
@@ -517,6 +547,45 @@ figure.icon {
     line-height: 2rem;
     font-weight: 500;
     letter-spacing: 0.6px;
+  }
+
+  /* --- Make Typo section swipeable like slider on mobile --- */
+  .typo-items {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1.5vmax;
+    padding-bottom: 0.6rem; 
+  }
+
+  .typo-items .item-typo {
+    flex: 0 0 80%;          
+    max-width: 80%;
+    min-width: 220px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    margin-right: 1.5vmax;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+  .typo-icon, .item-typo_title, .item-typo_descript {
+    min-width: 0;
+    word-break: break-word;
+  }
+
+  
+  .typo-items::-webkit-scrollbar {
+    height: 8px;
+  }
+  .typo-items::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.12);
+    border-radius: 999px;
   }
 }
 

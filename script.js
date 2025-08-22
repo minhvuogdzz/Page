@@ -118,7 +118,6 @@ function startCountdownFromHtml() {
   update();
   const intervalId = setInterval(() => {
     update();
-    // stop when reaches zero (optional)
     if (
       daysEl.textContent === "00" &&
       hoursEl.textContent === "00" &&
@@ -135,14 +134,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   startCountdownFromHtml();
 
-  // Init Swiper AFTER products are rendered, only for product swiper
+
   const productEl = document.querySelector(".product-swiper");
   if (!productEl) {
     console.error("product-swiper element not found");
     return;
   }
 
-  // Ensure Swiper is available
   if (typeof Swiper === "undefined") {
     console.error("Swiper is not loaded");
     return;
