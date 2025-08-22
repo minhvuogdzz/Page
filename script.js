@@ -66,7 +66,6 @@ function renderProducts() {
     .join("");
 }
 
-// --- Thêm: startCountdownFromHtml ---
 function startCountdownFromHtml() {
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");
@@ -82,13 +81,11 @@ function startCountdownFromHtml() {
     return String(num).padStart(2, "0");
   }
 
-  // đọc giá trị ban đầu (số) từ HTML
   const initialDays = parseInt(daysEl.textContent, 10) || 0;
   const initialHours = parseInt(hoursEl.textContent, 10) || 0;
   const initialMinutes = parseInt(minutesEl.textContent, 10) || 0;
   const initialSeconds = parseInt(secondsEl.textContent, 10) || 0;
 
-  // tính thời điểm đích (target) dựa trên giá trị ban đầu tính từ now
   const now = Date.now();
   const target = new Date(
     now +
@@ -132,12 +129,10 @@ function startCountdownFromHtml() {
     }
   }, 1000);
 }
-// --- end startCountdownFromHtml ---
 
 document.addEventListener("DOMContentLoaded", async () => {
   renderProducts();
 
-  // Bắt đầu countdown ngay sau khi render products
   startCountdownFromHtml();
 
   // Init Swiper AFTER products are rendered, only for product swiper
@@ -186,13 +181,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (fill) fill.style.width = `${percent}%`;
   }
 
-  // Dynamic import overview (avoid top-level import errors)
+  // Dynamic import overview 
   try {
     const mod = await import("./asset/data/overview.js");
     const overviews = mod.overviews || mod.default;
     if (overviews && Array.isArray(overviews)) {
       renderOverview(overviews);
-      // init Swiper instances AFTER rendering overview slides
       initOverviewSwipers();
     } else {
       console.warn("overviews not found or invalid", overviews);
@@ -218,15 +212,12 @@ function renderOverview(data) {
 
   document.querySelector(".overview__gallery")?.insertAdjacentHTML("beforeend", html);
 }
-
-// --- Thêm: init Swipers cho overview ---
 function initOverviewSwipers() {
   if (typeof Swiper === "undefined") {
     console.error("Swiper is not loaded (overview)");
     return;
   }
 
-  // main overview swiper (uses .btn-prev / .btn-next in HTML)
   new Swiper(".swiperOverview", {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -241,7 +232,7 @@ function initOverviewSwipers() {
     loop: true,
   });
 
-  // modal overview swiper (uses overview__button-prev / overview__button-next)
+
   new Swiper(".swiperOverviewModal", {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -257,7 +248,6 @@ function initOverviewSwipers() {
     loop: true,
   });
 }
-// --- end initOverviewSwipers ---
 
 //conparison
 const comparisonSlider = document.querySelector(".comparison__slider input");
@@ -270,7 +260,6 @@ comparisonSlider.addEventListener("input", () => {
   imageRight.style.clipPath = `inset(0 0 0 ${sliderValue}%)`;
 });
 
-// --- Thêm: helper renderRating ---
 function renderRating(rating = 0) {
   const full = Math.max(0, Math.min(5, Math.floor(Number(rating) || 0)));
   return Array(full)
@@ -281,9 +270,7 @@ function renderRating(rating = 0) {
     )
     .join("");
 }
-// --- end helper ---
 
-// --- Sửa: renderFeedback dùng .rating và an toàn nếu DOM chưa có ---
 const renderFeedback = (data) => {
   if (!Array.isArray(data)) return;
   const html = data
@@ -313,9 +300,7 @@ const renderFeedback = (data) => {
   const listEl = document.querySelector(".feedback__list");
   if (listEl) listEl.innerHTML = html;
 };
-// --- end renderFeedback ---
 
-// Gọi sau khi định nghĩa
 renderFeedback(feedbacks);
 
 new Swiper(".swiperFeedback", {
@@ -395,7 +380,7 @@ const renderQuestion = (data) => {
 };
 renderQuestion(questions);
 
-// --- ADDED: attach accordion handlers AFTER renderQuestion ---
+
 (function attachQuestionAccordion() {
   const PLUS_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>`;
   const MINUS_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 11V13H19V11H5Z"/></svg>`;
@@ -413,15 +398,13 @@ renderQuestion(questions);
     const icon = header.querySelector(".accordion__header--icon");
     const wasActive = item.classList.contains("active");
 
-    // Collapse all & reset icons
+    // Collapse all 
     container.querySelectorAll(".accordion__item.active").forEach((el) => el.classList.remove("active"));
     container.querySelectorAll(".accordion__header--icon").forEach((el) => (el.innerHTML = PLUS_SVG));
 
-    // Toggle open the clicked item
     if (!wasActive) {
       item.classList.add("active");
       if (icon) icon.innerHTML = MINUS_SVG;
     }
   });
 })();
-// --- end attachQuestionAccordion ---
