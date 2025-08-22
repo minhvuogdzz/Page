@@ -379,7 +379,7 @@ figure.icon {
 .swiper-button {
   cursor: pointer;
   transition: color ease 0.25s;
-  background-color: #fff;
+  background-color: #ffffff00 !important;
   color: #000;
   display: none;
   justify-content: center;
@@ -1179,6 +1179,7 @@ button.close-modal:hover img {
 .product-swiper,
 .product-swiper .swiper-wrapper {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: stretch;
 }
