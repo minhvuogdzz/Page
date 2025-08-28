@@ -1693,7 +1693,7 @@ button.close-modal:hover img {
   height: fit-content;
   align-self: unset;
   width: 58%;
-  flex: 0 0 58%;
+  flex: 0 0 50%;
   align-items: flex-start;
 }
 
